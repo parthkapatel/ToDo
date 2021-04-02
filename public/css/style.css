@@ -1,3 +1,4 @@
+
 #mainDiv{
     width:100%;
     height: 100%;
@@ -6,6 +7,8 @@
     border-radius: 10px;
     box-shadow: 0 0 20px #a0aec0;
     margin-top: 100px;
+    background-image: url("/img/todo2.jpeg");
+    background-repeat: no-repeat;
 }
 #listDiv{
     height:675px;
@@ -37,4 +40,50 @@ i{
 }
 .link p{
     color: gray;
+}
+#selectTitle{
+    font-size: 40px;
+    color:#212529 ;
+    text-shadow: 0 0 50px white;
+}
+
+
+html {
+    --scrollbarBG: #CFD8DC;
+    --thumbBG: #90A4AE;
+}
+/*#listDiv::-webkit-scrollbar {*/
+/*    width: 11px;*/
+/*}*/
+/*#listDiv {*/
+/*    scrollbar-width: thin;*/
+/*    scrollbar-color: var(--thumbBG) var(--scrollbarBG);*/
+/*}*/
+/*#listDiv::-webkit-scrollbar-track {*/
+/*    background: var(--scrollbarBG);*/
+/*}*/
+/*#listDiv::-webkit-scrollbar-thumb {*/
+/*    background-color: var(--thumbBG) ;*/
+/*    border-radius: 6px;*/
+/*    border: 3px solid var(--scrollbarBG);*/
+/*}*/
+
+#listDiv::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+#listDiv::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+#listDiv::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
 }
