@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\TaskEvent;
 use App\Http\Controllers\ToDoController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +26,10 @@ Route::get('/task/{id}/mark-as-read', [ToDoController::class,"updateMarkAsRead"]
 Route::get('/task/{id}/delete', [ToDoController::class,"destroy"]);
 Route::get('/task/arrangeOrder', [ToDoController::class,"arrangeOrder"]);
 Route::get('/task/search', [ToDoController::class,"show"]);
+
+
+Route::get("/event",function (){
+    return event(new TaskEvent("Hello Parth"));
+});
+
+Route::get("/sendmail",[ToDoController::class,"store"]);

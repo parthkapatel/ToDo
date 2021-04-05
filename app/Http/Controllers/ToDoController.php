@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 
+use App\Events\TaskEvent;
 use App\Interfaces\ToDoRepositoryInterface;
+use App\Mails\MailTrap;
 use App\Models\ToDo;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -11,6 +13,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 
 class ToDoController extends Controller
@@ -60,6 +63,7 @@ class ToDoController extends Controller
             "notes" => $request->notes
         ];
         $data = $this->todoRepository->save($data);
+        event(new TaskEvent($data));
         return Redirect::back();
     }
 
