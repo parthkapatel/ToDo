@@ -17,7 +17,7 @@ class MailTrap extends Mailable
     /**
      * Create a new message instance.
      *
-     * @param ToDo $task
+     * @param $data
      */
     public function __construct($data)
     {
@@ -29,7 +29,7 @@ class MailTrap extends Mailable
      *
      * @return $this
      */
-    public function build()
+    public function build(): MailTrap
     {
         return $this->view('mails.taskMail');
     }

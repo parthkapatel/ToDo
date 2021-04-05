@@ -28,8 +28,3 @@ Route::get('/task/arrangeOrder', [ToDoController::class,"arrangeOrder"]);
 Route::get('/task/search', [ToDoController::class,"show"]);
 
 
-Route::get("/event",function (){
-    return event(new TaskEvent("Hello Parth"));
-});
-
-Route::get("/sendmail",[ToDoController::class,"store"]);

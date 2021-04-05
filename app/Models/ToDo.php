@@ -15,4 +15,20 @@ class ToDo extends Model
      * @var mixed
      */
     private $title;
+    /**
+     * @var mixed
+     */
+    private $start_date;
+    /**
+     * @var mixed
+     */
+    private $due_date;
+    /**
+     * @var mixed
+     */
+    private $notes;
+    /**
+     * @var int|mixed
+     */
+    private $task_order;
 }

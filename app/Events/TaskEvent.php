@@ -20,11 +20,11 @@ class TaskEvent
 
     /**
      * Create a new event instance.
-     * @param $data
+     * @param $getData
      */
-    public function __construct($data)
+    public function __construct($getData)
     {
-        $this->data = $data;
+        $this->data = $getData;
     }
 
     /**

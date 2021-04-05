@@ -62,8 +62,8 @@ class ToDoController extends Controller
             "due_date" => $request->dueDate,
             "notes" => $request->notes
         ];
-        $data = $this->todoRepository->save($data);
-        event(new TaskEvent($data));
+        $returnData = $this->todoRepository->save($data);
+        TaskEvent::dispatch($returnData);
         return Redirect::back();
     }
 

@@ -15,11 +15,11 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
-<h3 class="h3">New task is submitted.</h3>
+<h1 class="h3">New task is submitted.</h1>
 
-<h5>Title : {{ $task->title }}</h5>
-<h5>Notes : {{ $task->notes }}</h5>
-<h5>Start Date : {{ $task->start_date }}</h5>
-<h5>Due Date : {{ $task->due_date }}</h5>
+<h3>Title : {{ $task->title }}</h3>
+<h3>Notes : {{ $task->notes }}</h3>
+<h3>Start Date : {{ $task->start_date }}</h3>
+<h3>Due Date : {{ $task->due_date }}</h3>
 </body>
 </html>

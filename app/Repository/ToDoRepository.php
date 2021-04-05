@@ -23,7 +23,7 @@ class ToDoRepository implements ToDoRepositoryInterface
         return $this->todo->orderBy('task_order')->orderBy('mark_as_favorite', 'DESC')->get();
     }
 
-    public function save($data)
+    public function save($data): ToDo
     {
         $order = $this->todo::max("task_order");
         $this->todo->title = $data["title"];

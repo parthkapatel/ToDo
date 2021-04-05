@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Mail;
 
 class TaskEventListner implements ShouldQueue
 {
-
+    use InteractsWithQueue;
 
     /**
      * Create the event listener.
@@ -24,12 +24,11 @@ class TaskEventListner implements ShouldQueue
     /**
      * Handle the event.
      *
-     * @param TaskEvent $event
-     * @return TaskEvent
+     * @param $data
      */
-    public function handle(TaskEvent $event): TaskEvent
+    public function handle($data)
     {
-        Mail::to("parthpatel7851@gmail.com")->send(new MailTrap($this->data));
+        Mail::to("parthpatel7851@gmail.com")->send(new MailTrap($data->data));
     }
 
 }
